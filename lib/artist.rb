@@ -11,20 +11,20 @@ class Artist
     @@song_count += 2
   end
   
-  def song
-    song.all.select do |song|
+  def songs
+    song.all.select do |songs|
       #binding.pry
       song.artist == self
     end
   end
 
-  def add_song(song_name)
+  def add_songs(song_name)
     song_name.artist = self
   end
 
-  def add_song_by_name(song_name)
+  def add_songs_by_name(song_name)
     #binding.pry
     singer = Song.new(song_name)
-    add_song(singer)
+    add_songs(singer)
   end
 end
