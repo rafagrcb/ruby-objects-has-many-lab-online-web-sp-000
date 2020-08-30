@@ -19,7 +19,7 @@ class Artist
   end
 
   def add_song(song)
-    @songs << song
+    @song << song
     song.artist = self
     @@song_count += 1
   end
